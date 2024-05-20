@@ -1,0 +1,36 @@
+name: parallel_universe_weather
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python>=3.11
+  # Load xarray and cfgrib
+  - xarray>=2022.12
+  - cfgrib
+  - netcdf4
+  - dask >=2022.12
+
+  - cartopy>=0.21
+  - shapely>=2.0.0
+  - seaborn>=0.11
+  # install notebook packages
+  - jupyter
+  - notebook
+  - metpy>=1.5  # Python package for meteorological data
+  
+  - pytest  # Testing framework
+  - sphinx  # Documentation generator
+  - matplotlib>=3.4  # Basic package for static plots
+  - pre-commit  # A framework for managing and maintaining multi-language pre-commit hooks
+
+  - pip>=21.2
+  - pip:
+    - memory_profiler
+    - ipympl
+    - pdbpp  # Enhanced version of pdb, a Python debugger
+    - nbsphinx  # Enables the use of Jupyter notebooks in Sphinx documentation
+    - sphinx_rtd_theme  # Theme for Sphinx documentation
+    - sphinx-autodoc-typehints  # For including type hints in documentation
+    - black  # Code formatter
+    - flake8  # Linter that checks the code base against coding style (PEP 8)
+    - mypy  # Static type checker for Python
